@@ -1,0 +1,14 @@
+include ../layout/header.jade
+
+  block content
+    .container
+    .row
+      each item in movie
+        .col-md-2
+          .thumbnail
+            a(href="")
+              img(src="#{item.poster}", alt="")
+            .caption
+              h3 #{item.title}
+              p: a.btn.btn-primary(href="/detail/#{item.id}", role="button",target="_blank") 观看预告片
+  include ../layout/footer.jade

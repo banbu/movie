@@ -1,0 +1,24 @@
+{
+  "name": "movie",
+  "description": "movie",
+  "main": "app.js",
+  "authors": [
+    "banbu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "movie"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

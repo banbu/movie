@@ -1,0 +1,22 @@
+include ../layout/header.jade
+
+  block content
+  .container
+    .row
+      each item in movie
+        .col-md-7
+          embed(src="#{item.flash}" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" width="600" height="450")
+        .col-md-5
+          dl.dl-horizontal
+            dt 电影名称
+            dd #{item.title}
+            dt 导演
+            dd #{item.direction}
+            dt 国家
+            dd #{item.country}
+            dt 语言
+            dd #{item.language}
+            dt 上映年份
+            dd #{item.year}
+            dt 简介
+          dd #{item.summary}
