@@ -37,7 +37,7 @@ router.get('/admin/update/:id', function(req, res, next) {
 	db.query('select * from movies where id=' + id,function(err,rows){
 		if(err){
 			res.render('admin',{
-				title: '404'
+				title: '错误页面'
 			})
 		}
 		else{
@@ -87,6 +87,7 @@ router.post('/admin/movie/new', function (req, res) {
 	        }
     	})
     }
+    
     else{
 	    db.query("insert into movies(title,direction,country,year,poster,flash,summary,language,updateAt) values('"+ title +"','"+ direction +"','"+ country +"','"+ year +"','"+ poster +"','"+ flash +"','"+ summary +"','"+ language +"','"+ updateAt +"')", function (err, rows) {
 	        if (err) {

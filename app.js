@@ -8,6 +8,8 @@ var index = require('./routes/index')
 var detail = require('./routes/detail')
 var admin = require('./routes/admin')
 var list = require('./routes/list')
+var login = require('./routes/login')
+var signup = require('./routes/signup')
 var bodyParser = require('body-parser')
 app.locals.moment = require('moment')
 
@@ -22,6 +24,8 @@ app.use('/',index)
 app.use('/',detail)
 app.use('/',admin)
 app.use('/',list)
+app.use('/',login)
+app.use('/',signup)
 
 //listen port
 app.listen(port)

@@ -1,0 +1,23 @@
+doctype html
+html(lang="zh-CN")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    //- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！
+    meta(name="description", content="")
+    meta(name="author", content="")
+    title #{title}
+    //- Bootstrap core CSS
+    link(href="/static/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/static/assets/css/ie10-viewport-bug-workaround.css", rel="stylesheet")
+    link(href="/static/bootstrap/dist/css/signin.css", rel="stylesheet")
+  body
+    .container
+      form.form-signin(method="post", action="/signup")
+        h2.form-signin-heading #{title}
+        label.sr-only(for="inputEmail") 邮箱地址
+        input#inputEmail.form-control(type="email",name="email", placeholder="邮箱地址", required="", autofocus="")
+        label.sr-only(for="inputPassword") 密码
+        input#inputPassword.form-control(type="password",name="password" placeholder="密码", required="")
+        button.btn.btn-lg.btn-primary.btn-block(type="submit") 注册
